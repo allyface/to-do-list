@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS tasks;
 CREATE TABLE tasks (
   id SERIAL PRIMARY KEY,
   name VARCHAR (255) NOT NULL,
-  completed BOOLEAN NOT NULL
+  completed BOOLEAN DEFAULT false
 );
 
 INSERT INTO tasks( name, completed)
