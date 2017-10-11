@@ -7,10 +7,6 @@ const { createTodo, getAllTodos } = require('../db/queries')
 app.get( '/', function( request, response ) {
 
   getAllTodos()
-    .then( data => {
-      console.log('data', data)
-      return data
-    })
     .then( data => response.render( 'index', { allTodos: data }))
     .catch( error => response.render( 'error', { error }))
 });
